@@ -1,0 +1,27 @@
+<p>crear works!</p>
+
+<h3>Numero de Tarea</h3>
+<input>
+<br>
+<h3>Nombre de Tarea</h3>
+<input>
+<br>
+<h3>Descripcion de Tarea</h3>
+<input>
+<br>
+<br>
+
+
+
+<label for="crear">Tarea Nueva:</label>
+<input id = "crearTarea" name ="crearTarea" [(ngModel)] ="tarea" />
+{{tarea}}
+<button (click)="agregar()">Crear Tarea</button>
+
+<button (click)="limpiar()">Limpiar</button>
+
+<ul>
+    @for(tarea of tareas; track tarea){
+        <li>{{tarea}}</li>
+    }
+</ul>
